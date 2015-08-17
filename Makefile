@@ -1,6 +1,7 @@
-# be sure to change `modcloth-labs/mithril` to your namespace
-REV_VAR := mithril.RevString
-VERSION_VAR := mithril.VersionString
+# Based on https://gist.github.com/rafecolton/6049826
+
+REV_VAR := main.RevString
+VERSION_VAR := main.VersionString
 REPO_VERSION := $(shell git describe --always --dirty --tags)
 REPO_REV := $(shell git rev-parse --sq HEAD)
 GOBUILD_VERSION_ARGS := -ldflags "-X $(REV_VAR) $(REPO_REV) -X $(VERSION_VAR) $(REPO_VERSION)"

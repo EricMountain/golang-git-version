@@ -1,4 +1,4 @@
-package mithril
+package main
 
 import (
         "fmt"
@@ -12,11 +12,6 @@ var (
 	versionFlag = false
 	revFlag = false
 )
-
-func init() {
-	flag.BoolVar(&versionFlag, "version", false, "Print version and exit")
-	flag.BoolVar(&revFlag, "rev", false, "Print git revision and exit")
-}
 
 func main() {
 	progName := path.Base(os.Args[0])
